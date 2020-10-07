@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // base directory
-app.use(express.static(path.join(__dirname, '/..client/dist')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/test', (req, res) => {
   res.status(200).send('get request received');
