@@ -1,13 +1,36 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       currentImage: 1,
-      images: [];
+      images: []
     }
+  }
+
+  moveLeft() {
+    let nextImage;
+    if (this.state.currentImage === 1) {
+      nextImage = this.state.images.length - 1;
+    } else {
+      nextImage = this.state.currentImage - 1;
+    }
+    this.setState({
+      currentImage: nextImage
+    });
+  }
+
+  moveRight() {
+    let nextImage;
+    if (thist.state.currentImage === this.state.images.length) {
+      nextImage = 1;
+    } else {
+      nextImage = this.state.currentImage + 1;
+    }
+    this.setState({
+      currentImage: nextImage
+    });
   }
 
   render() {
@@ -35,4 +58,4 @@ class App extends React.Component {
   }
 };
 
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;
