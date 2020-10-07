@@ -11,8 +11,15 @@ div {
   display: block;
 }
 
+.image-carousel {
+  margin-top: 10px;
+  width: 728px;
+  max-width: 728px;
+}
+
 #imageUrl {
   width: 728px;
+  height: 100%;
 }
 
 .PhotoArea {
@@ -81,10 +88,10 @@ div {
   cursor: default;
   border-radius: 3rem;
   transition: opacity .25s linear;
-    transition-property: opacity;
-    transition-duration: 0.25s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
   opacity: 0;
   position: absolute;
   right: 10px;
@@ -95,4 +102,8 @@ div {
 
 .PhotoArea:hover #photoTracker {
   opacity: 1;
+}
+
+.image-full {
+  height: 441px;
 }
