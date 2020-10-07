@@ -34,7 +34,7 @@ class App extends React.Component {
             {this.state.currentImage} of {this.state.images.length}
           </div>
           <div class="image-full">
-            <img src={this.state.images[this.state.currentImage]} id="imageUrl"/>
+            <img src={this.state.images[this.state.currentImage - 1]} id="imageUrl"/>
           </div>
         </div>
       </div>
