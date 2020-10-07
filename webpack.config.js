@@ -1,10 +1,19 @@
+const path = require('path');
+const SRC_DIR = path.join(__dirname, '/client/src');
+const DIST_DIR = path.join(__dirname, '/client/dist');
+
 module.exports = {
-  entry: './client/index.jsx',
+  entry: `${SRC_DIR}/index.jsx`,
+  output: {
+    filename: 'main.js',
+    path: DIST_DIR
+  },
   module: {
+
     rules: [
       {
-        test: [/\.m?jsx$/, /\.m?js$/],
-        exclude: /(node_modules|bower_components)/,
+        test: [/\.jsx/, /\.m?js$/],
+        include: SRC_DIR,
         use: {
           loader: 'babel-loader',
           options: {
