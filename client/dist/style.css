@@ -7,6 +7,13 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   vertical-align: baseline;
 }
 
+body {
+  font-family: Libre Franklin;
+  line-height: 1.375;
+  font-size: 1rem;
+  color: #333;
+}
+
 div {
   display: block;
 }
@@ -106,4 +113,63 @@ div {
 
 .image-full {
   height: 441px;
+}
+
+.bottom-banner {
+  width: 728px;
+  padding-top: .5rem;
+}
+
+.card {
+  width: calc((100% - 1rem)/3);
+  margin-right: .5rem;
+  cursor: pointer;
+  height: 91px;
+  display: inline-block;
+}
+
+.card:last-of-type {
+  margin-right: 0;
+}
+
+.cardv2 {
+  height: 100%;
+  width: 100%;
+  border: none;
+  object-fit: cover;
+  border-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+.center {
+  margin: 0 5px 5px;
+  text-align: center;
+  min-width: 0;
+  flex: 1 1 50%;
+}
+
+.bottom-word {
+  margin: 0 5px 5px;
+  text-align: center;
+  min-width: 0;
+  flex: 1 1 50%;
+  font-size: .875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
 }
