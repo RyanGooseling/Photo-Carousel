@@ -4,14 +4,14 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentImage: 1,
-      images: []
+      currentImage: 0,
+      images: ['https://www.w3schools.com/html/pic_trulli.jpg', 'https://www.thehousedesigners.com/house-plans/images/AdvSearch2-7263.jpg', 'https://static.onecms.io/wp-content/uploads/sites/37/2016/02/15230656/white-modern-house-curved-patio-archway-c0a4a3b3.jpg']
     }
   }
 
   moveLeft() {
     let nextImage;
-    if (this.state.currentImage === 1) {
+    if (this.state.currentImage <= 0) {
       nextImage = this.state.images.length - 1;
     } else {
       nextImage = this.state.currentImage - 1;
@@ -23,8 +23,8 @@ class App extends React.Component {
 
   moveRight() {
     let nextImage;
-    if (thist.state.currentImage === this.state.images.length) {
-      nextImage = 1;
+    if (this.state.currentImage >= this.state.images.length - 1) {
+      nextImage = 0;
     } else {
       nextImage = this.state.currentImage + 1;
     }
@@ -35,23 +35,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="image-carousel">
-        <div className="buttons">
-          <div className="left-button">
+      <div class="image-carousel">
+        <div class="PhotoArea">
+          <div class="nav left">
             Left
           </div>
-          <div className="right-button">
+          <div class="nav right">
             Right
           </div>
-          <div className="fullscreen-button">
+          <div class="fullscreen-button">
             Fullscreen
           </div>
-          <div className="photoTracker">
+          <div class="photoTracker">
             {this.state.currentImage} of {this.state.images.length}
           </div>
-        </div>
-        <div className="image-full">
-          <img src="pic_trulli.jpg"/>
+          <div class="image-full">
+            <img src={this.state.images[this.state.currentImage]} id="imageUrl"/>
+          </div>
         </div>
       </div>
     )
