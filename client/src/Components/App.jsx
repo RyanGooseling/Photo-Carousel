@@ -10,26 +10,14 @@ class App extends React.Component {
   }
 
   moveLeft() {
-    let nextImage;
-    if (this.state.currentImage <= 0) {
-      nextImage = this.state.images.length - 1;
-    } else {
-      nextImage = this.state.currentImage - 1;
-    }
     this.setState({
-      currentImage: nextImage
+      currentImage: this.state.currentImage <= 0 ? this.state.images.length - 1 : this.state.currentImage - 1
     });
   }
 
   moveRight() {
-    let nextImage;
-    if (this.state.currentImage >= this.state.images.length - 1) {
-      nextImage = 0;
-    } else {
-      nextImage = this.state.currentImage + 1;
-    }
     this.setState({
-      currentImage: nextImage
+      currentImage: this.state.currentImage >= this.state.images.length - 1 ? 0 : this.state.currentImage + 1
     });
   }
 
@@ -37,17 +25,13 @@ class App extends React.Component {
     return (
       <div class="image-carousel">
         <div class="PhotoArea">
-          <div class="nav left">
-            Left
-          </div>
-          <div class="nav right">
-            Right
-          </div>
+          <div class="nav prev" onClick={e => this.moveLeft()}/>
+          <div class="nav next" onClick={e => this.moveRight()}/>
           <div class="fullscreen-button">
             Fullscreen
           </div>
           <div class="photoTracker">
-            {this.state.currentImage} of {this.state.images.length}
+            {this.state.currentImage + 1} of {this.state.images.length}
           </div>
           <div class="image-full">
             <img src={this.state.images[this.state.currentImage]} id="imageUrl"/>
