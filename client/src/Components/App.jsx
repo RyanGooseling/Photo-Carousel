@@ -25,8 +25,12 @@ class App extends React.Component {
     return (
       <div class="image-carousel">
         <div class="PhotoArea">
-          <div class="nav prev" onClick={e => this.moveLeft()}/>
-          <div class="nav next" onClick={e => this.moveRight()}/>
+          <div class="nav prev" onClick={e => this.moveLeft()}>
+            <div class="navButton"/>
+          </div>
+          <div class="nav next" onClick={e => this.moveRight()}>
+            <div class="navButton"/>
+          </div>
           <div class="fullscreen-button">
             Fullscreen
           </div>

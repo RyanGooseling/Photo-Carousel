@@ -1,0 +1,70 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+div {
+  display: block;
+}
+
+#imageUrl {
+  width: 728px;
+}
+
+.PhotoArea {
+  position: relative;
+  height: 441px;
+  width: 100%;
+  background: #333;
+}
+
+.PhotoArea .nav {
+  height: 100%;
+  width: 180px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  top: 0;
+}
+
+.PhotoArea .nav .navButton {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: calc(50% - 18px);
+  overflow: hidden;
+  border-radius: 100%;
+  opacity: .6;
+  background-color: rgba(0,0,0,.66);
+  border: 1px solid hsla(0,0%,100%,.66);
+  transition: opacity .25s linear;
+}
+
+.PhotoArea:hover .nav .navButton {
+  opacity: .8;
+  border: 1px solid hsla(0,0%,100%,.75);
+  background-color: rgba(0,0,0,.625);
+}
+
+.PhotoArea .nav.next {
+  right: 0;
+  user-select: none;
+}
+
+.PhotoArea .nav.prev .navButton {
+  transform: scaleX(-1);
+  left: 20px;
+}
+
+.PhotoArea .nav.next .navButton {
+  right: 20px;
+}
+
+.PhotoArea .nav .navButton:hover {
+  opacity: 1;
+  box-shadow: 0 0 8px hsla(0,0%,100%,.15);
+}
