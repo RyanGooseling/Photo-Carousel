@@ -1,11 +1,11 @@
 import React from 'react';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       currentImage: 1,
-      images: ['https://www.w3schools.com/html/pic_trulli.jpg', 'https://www.thehousedesigners.com/house-plans/images/AdvSearch2-7263.jpg', 'https://static.onecms.io/wp-content/uploads/sites/37/2016/02/15230656/white-modern-house-curved-patio-archway-c0a4a3b3.jpg']
+      images: this.props.images
     }
   }
 
@@ -44,7 +44,7 @@ class App extends React.Component {
         <div class="bottom-banner">
           <div class="card" id="album">
             <div class="cardv2">
-              <img class="card-image" src="https://ssl.cdn-redfin.com/system_files/media/435639_JPG/genLdpUgcMediaBrowserUrl/item_9.jpg"/>
+              <img class="card-image" src={this.state.images[0]}/>
               <div class="center">
                 <span class="bottom-word">{this.state.images.length} Photos</span>
               </div>
