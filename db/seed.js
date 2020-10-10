@@ -5,6 +5,7 @@ const Carousel = require('./Carousel.js');
 
 // specs
 const seedCount = 100;
+
 const minAlbumSize = 2;
 const maxAlbumSize = 25;
 
@@ -17,6 +18,7 @@ const createAlbum = function() {
   }
   return album;
 };
+
 const generateHouses = function() {
   let houses = [];
   for (let i = 1; i <= seedCount; i++) {
