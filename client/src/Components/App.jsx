@@ -24,51 +24,51 @@ class App extends React.Component {
   render() {
     return (
       <div id="sam">
-        <div class="image-carousel">
-          <div class="fullscreen-button"/>
-          <div class="PhotoArea">
-            <div class="nav prev" onClick={e => this.moveLeft()}>
-              <div class="navButton"/>
+        <div class="sam-image-carousel">
+          <div class="sam-fullscreen-button"/>
+          <div class="sam-PhotoArea">
+            <div class="sam-nav sam-prev" onClick={e => this.moveLeft()}>
+              <div class="sam-navButton"/>
             </div>
 
-            <div class="nav next" onClick={e => this.moveRight()}>
-              <div class="navButton"/>
+            <div class="sam-nav sam-next" onClick={e => this.moveRight()}>
+              <div class="sam-navButton"/>
             </div>
 
-            <div id="photoTracker">
+            <div id="sam-photoTracker">
               {this.state.currentImage + ' of ' + this.state.images.length}
             </div>
 
-            <div class="image-full">
-              <img src={this.state.images[this.state.currentImage - 1]} id="imageUrl"/>
+            <div class="sam-image-full">
+              <img src={this.state.images[this.state.currentImage - 1]} id="sam-imageUrl"/>
             </div>
           </div>
         </div>
 
-        <div class="bottom-banner">
-          <div class="card" id="album">
-            <div class="cardv2">
-              <img class="card-image" src={this.state.images[0]}/>
-              <div class="center">
-                <span class="bottom-word">{this.state.images.length} Photos</span>
+        <div class="sam-bottom-banner">
+          <div class="sam-card" id="sam-album">
+            <div class="sam-cardv2">
+              <img class="sam-card-image" src={this.state.images[0]}/>
+              <div class="sam-center">
+                <span class="sam-bottom-word">{this.state.images.length} Photos</span>
               </div>
             </div>
           </div>
 
-          <div class="card" id="3d-walkthrough">
-            <div class="cardv2">
-              <img class="card-image" src="https://mightyvisage.co.uk/wp-content/uploads/2019/04/animation-play-button.jpg"/>
-              <div class="center">
-                <span class="bottom-word">3D Walkthrough</span>
+          <div class="sam-card" id="sam-3d-walkthrough">
+            <div class="sam-cardv2">
+              <img class="sam-card-image" src="https://mightyvisage.co.uk/wp-content/uploads/2019/04/animation-play-button.jpg"/>
+              <div class="sam-center">
+                <span class="sam-bottom-word">3D Walkthrough</span>
               </div>
             </div>
           </div>
 
-          <div class="card" id="street-view">
-            <div class="cardv2">
-              <img class="card-image" src="https://cdn.images.express.co.uk/img/dynamic/25/590x/Google-Maps-Street-View-Wayne-s-World-961777.jpg"/>
-              <div class="center">
-                <span class="bottom-word">Street View</span>
+          <div class="sam-card" id="sam-street-view">
+            <div class="sam-cardv2">
+              <img class="sam-card-image" src="https://cdn.images.express.co.uk/img/dynamic/25/590x/Google-Maps-Street-View-Wayne-s-World-961777.jpg"/>
+              <div class="sam-center">
+                <span class="sam-bottom-word">Street View</span>
               </div>
             </div>
           </div>
